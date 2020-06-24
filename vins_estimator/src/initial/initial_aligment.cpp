@@ -217,7 +217,7 @@ bool LinearAlignment(map<double, ImageFrame> &all_image_frame, Vector3d &g, Vect
     double s = x(6) / 100.0;
     ROS_DEBUG("estimated scale: %f", s);
     //g = x.segment<3>(n_state - 4);
-    g = x.segment<3>(3)
+    g = x.segment<3>(3);
     ROS_DEBUG_STREAM(" result g     " << g.norm() << " " << g.transpose());
     if(fabs(g.norm() - G.norm()) > 1.0 || s < 0)
     {
